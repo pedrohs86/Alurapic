@@ -18,8 +18,8 @@ import { HomeRoutingModule } from './home/home.routing.module';
     PhotosModule,
     ErrorsModule,
     CoreModule,
+    HomeRoutingModule,
     AppRoutingModule,
-    HomeRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

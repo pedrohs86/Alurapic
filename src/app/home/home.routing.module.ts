@@ -6,8 +6,6 @@ import { AuthGuard } from '../core/auth/auth.guard';
 import { SinginComponent } from './singin/singin.component';
 import { SingupComponent } from './singup/singup.component';
 
-
-
 const routes: Routes = [
   {
     path: '',
