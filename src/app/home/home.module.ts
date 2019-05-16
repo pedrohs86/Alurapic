@@ -6,8 +6,8 @@ import { SinginComponent } from './singin/singin.component';
 import { VmessageModule } from '../shared/components/vmessage/vmessage.module';
 import { RouterModule } from '@angular/router';
 import { SingupComponent } from './singup/singup.component';
-import { HomeComponent } from './home.component';
 import { HomeRoutingModule } from './home.routing.module';
+import { HomeComponent } from './home.component';
 
 @NgModule({
     declarations: [
