@@ -5,8 +5,8 @@ import { AppComponent } from './app.component';
 
 import { PhotosModule } from './photos/photos.module';
 import { ErrorsModule } from './errors/errors.module';
-import { HomeModule } from './home/home.module';
 import { CoreModule } from './core/core.module';
+import { HomeRoutingModule } from './home/home.routing.module';
 
 
 @NgModule({
@@ -15,11 +15,11 @@ import { CoreModule } from './core/core.module';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     PhotosModule,
     ErrorsModule,
-    HomeModule,
-    CoreModule
+    CoreModule,
+    AppRoutingModule,
+    HomeRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
