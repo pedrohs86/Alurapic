@@ -9,15 +9,14 @@ import { PhotoListResolver } from './photos/photo-list/photo-list.resolver';
 
 const routes: Routes = [
   {
-    path: '',
-    pathMatch: 'full',
-    redirectTo: 'home'
+      path: '',
+      pathMatch: 'full',
+      redirectTo: 'home'
   },
   {
-    path: 'home',
-    loadChildren: './home/home.module#HomeModule',
+      path: 'home',
+      loadChildren: './home/home.module#HomeModule',
   },
-
   {
     path: 'user/:userName',
     component: PhotoListComponent,

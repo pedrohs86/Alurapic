@@ -16,12 +16,15 @@ import { HomeComponent } from './home.component';
         HomeComponent
     ],
     imports: [
-      ReactiveFormsModule,
       CommonModule,
+      FormsModule,
+      ReactiveFormsModule,
       VmessageModule,
       RouterModule,
-      FormsModule,
       HomeRoutingModule
+    ],
+    exports: [
+      HomeComponent,
     ]
 })
 

@@ -6,24 +6,24 @@ import { AuthGuard } from '../core/auth/auth.guard';
 import { SinginComponent } from './singin/singin.component';
 import { SingupComponent } from './singup/singup.component';
 
+
+
 const routes: Routes = [
   {
-    path: '',
-    component: HomeComponent,
-    canActivate: [AuthGuard],
-    children:
-    [
-      {
-        path: '',
-        component: SinginComponent,
-      },
-      {
-        path: 'singup',
-        component: SingupComponent,
-      },
-    ]
+      path: '',
+      component: HomeComponent,
+      canActivate: [AuthGuard],
+      children: [
+          {
+              path: '',
+              component: SinginComponent,
+          },
+          {
+              path: 'signup',
+              component: SingupComponent,
+          },
+      ]
   },
-
 ];
 
 @NgModule({
