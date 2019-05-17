@@ -9,7 +9,7 @@ import { NewUser } from './new-user';
 import { SingUpService } from './singup.service';
 
 @Component({
-
+    providers: [ UserNotTakenValidatorService ],
     templateUrl: './singup.component.html',
 })
 

@@ -19,7 +19,7 @@ const routes: Routes = [
               component: SinginComponent,
           },
           {
-              path: 'signup',
+              path: 'singup',
               component: SingupComponent,
           },
       ]

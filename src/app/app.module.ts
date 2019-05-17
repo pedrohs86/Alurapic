@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { PhotosModule } from './photos/photos.module';
 import { ErrorsModule } from './errors/errors.module';
 import { CoreModule } from './core/core.module';
-import { HomeRoutingModule } from './home/home.routing.module';
 
 
 @NgModule({
@@ -18,7 +17,6 @@ import { HomeRoutingModule } from './home/home.routing.module';
     PhotosModule,
     ErrorsModule,
     CoreModule,
-    HomeRoutingModule,
     AppRoutingModule,
   ],
   providers: [],
