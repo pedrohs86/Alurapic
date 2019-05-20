@@ -12,6 +12,8 @@ import { Observable } from 'rxjs';
 export class PhotoDetailsComponent implements OnInit {
 
   photo$: Observable<Photo>;
+  photoId: number;
+
 
   constructor(
     private route: ActivatedRoute,
@@ -19,7 +21,8 @@ export class PhotoDetailsComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.photo$ = this.photoService
-                        .findById(this.route.snapshot.params.photoId);
+    this.photoId = this.route.snapshot.params.photoId;
+    this.photo$ = this.photoService.findById(this.photoId);
+
   }
 }
