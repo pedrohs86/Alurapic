@@ -2,7 +2,6 @@ import { Directive, Input, ElementRef, Renderer, OnInit } from '@angular/core';
 
 import { Photo } from '../../photo/photo';
 import { UserService } from 'src/app/core/user/user.service';
-import { NONE_TYPE } from '@angular/compiler/src/output/output_ast';
 
 @Directive({
     selector: '[photoOwnerOnly]',
