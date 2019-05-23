@@ -4,6 +4,7 @@ import { AuthService } from 'src/app/core/auth/auth.service';
 import { Router } from '@angular/router';
 import { PlatformDetectorService } from 'src/app/core/platform-detector/platform-detector.service';
 
+
 @Component({
   selector: 'ap-singin',
   templateUrl: './singin.component.html',
@@ -22,7 +23,6 @@ export class SinginComponent implements OnInit {
     ) { }
 
   ngOnInit(): void {
-
     this.loginForm = this.formBuilder.group({
       userName: ['', Validators.required],
       password: ['', Validators.required]
