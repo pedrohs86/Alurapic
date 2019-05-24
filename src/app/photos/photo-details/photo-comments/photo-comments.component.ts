@@ -28,7 +28,7 @@ export class PhotoCommentsComponent implements OnInit {
   ngOnInit(): void {
     this.comments$ = this.photoService.getComments(this.photoId);
     this.commentForm = this.formBuilder.group({
-      comment:['', Validators.maxLength(300)]
+      comment:['', [Validators.maxLength(300), Validators.required]]
     })
   }
   save(){
