@@ -1,12 +1,13 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { PlatformDetectorService } from 'src/app/core/platform-detector/platform-detector.service';
 
+import { PlatformDetectorService } from 'src/app/core/platform-detector/platform-detector.service';
 import { lowerCaseValidator } from 'src/app/shared/validators/lower-case.validator';
 import { UserNotTakenValidatorService } from './user-not-taken.validator.service';
 import { NewUser } from './new-user';
 import { SingUpService } from './singup.service';
+import { userNamePassword } from './usernameXpassword.validator';
 
 @Component({
     providers: [ UserNotTakenValidatorService ],
@@ -60,8 +61,9 @@ export class SingupComponent implements OnInit {
             Validators.minLength(8),
             Validators.maxLength(16)
           ]
-        ],
-
+        ]},
+        {
+          validator: userNamePassword,
       });
 
 // tslint:disable-next-line: no-unused-expression
@@ -69,13 +71,15 @@ export class SingupComponent implements OnInit {
   }
 
   singup() {
-    const newUser: NewUser = this.singupForm.getRawValue() as NewUser;
-    this.singupService
-        .singup(newUser)
-        .subscribe(
-          () => this.router.navigate(['']),
-          err => console.log(err)
-        );
+    if (this.singupForm.valid && !this.singupForm.pending) {
+      const newUser: NewUser = this.singupForm.getRawValue() as NewUser;
+      this.singupService
+          .singup(newUser)
+          .subscribe(
+            () => this.router.navigate(['']),
+            err => console.log(err)
+          );
+    }
   }
 
 }
